@@ -1,2 +1,16 @@
-<s-cnt-faq-search [header]="getHeader()"></s-cnt-faq-search>
-<s-cnt-faq-block-section [blockSection]="getBlocks()"></s-cnt-faq-block-section>
+<s-cnt-faq-header [header]="getHeader()"
+                  (clickBack)="showEvent($event)"></s-cnt-faq-header>
+<s-cnt-faq-search [menu]="getSearchMenu()" [category]="getCategory()" [logo]="getLogo()"
+                  (clickMenu)="showEvent($event)"
+                  (clickSearch)="showEvent($event)"
+                  (clickLogo)="showEvent($event)"
+                  (clickCategory)="showEvent($event)"></s-cnt-faq-search>
+<s-cnt-faq-block-header [blockHeader]="getBlockHeader()"
+                        (clickLink)="showEvent($event)"
+                        (clickRight)="showEvent($event)"
+                        (clickLeft)="showEvent($event)"></s-cnt-faq-block-header>
+<s-cnt-faq-blocks [blocks]="getBlocks()"
+                  (clickBlockHeader)="showEvent($event)"
+                  (clickBlockText)="showEvent($event)"
+                  (clickBlockAuthor)="showEvent($event)"
+                  (clickBlockImg)="showEvent($event)"></s-cnt-faq-blocks>

@@ -12,8 +12,23 @@ export class FirstPageComponent implements OnInit {
   getHeader = () => {
     return this.algolia.header.slice(0,1);
   }
+  getSearchMenu = () => {
+    return this.algolia.searchMenu.slice(0,5);
+  }
+  getCategory = () => {
+    return this.algolia.category.slice(0,9);
+  }
+  getLogo = () => {
+    return this.algolia.logo.slice(0,1);
+  }
+  getBlockHeader = () => {
+    return this.algolia.blockHeader.slice(0,1);
+  }
   getBlocks = () => {
-    return this.algolia.blockSection.slice(0,1);
+    return this.algolia.blocks.slice(0,12);
+  }
+  showEvent({detail}){
+    console.log(detail);
   }
   ngOnInit(): void {
   }
