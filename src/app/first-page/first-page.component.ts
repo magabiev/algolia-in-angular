@@ -21,6 +21,9 @@ export class FirstPageComponent implements OnInit {
   getLogo = () => {
     return this.algolia.logo.slice(0,1);
   }
+  getPlaceholder = () => {
+    return this.algolia.placeHolder.slice(0,1);
+  }
   getBlockHeader = () => {
     return this.algolia.blockHeader.slice(0,1);
   }
