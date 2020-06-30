@@ -35,5 +35,4 @@ export class FirstPageComponent implements OnInit {
   }
   ngOnInit(): void {
   }
-
 }

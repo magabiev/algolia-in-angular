@@ -1,18 +1,19 @@
 import { AppPage } from './app.po';
-import { browser, logging } from 'protractor';
+import {browser, by, element, logging} from 'protractor';
 
 describe('workspace-project App', () => {
   let page: AppPage;
-
+  let blocksComponent = element.all(by.tagName("s-cnt-faq-blocks"));
   beforeEach(() => {
     page = new AppPage();
   });
-
-  it('should display welcome message', () => {
+  it('Open page', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('algolia-angular app is running!');
   });
+  it('length component "blocks"', () => {
 
+    expect(blocksComponent.count()).toEqual(12);
+  })
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser
     const logs = await browser.manage().logs().get(logging.Type.BROWSER);
