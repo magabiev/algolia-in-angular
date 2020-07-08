@@ -11,7 +11,6 @@ describe('workspace-project App', () => {
     page.navigateTo();
   });
   it('length component "blocks"', () => {
-
     expect(blocksComponent.count()).toEqual(12);
   })
   afterEach(async () => {

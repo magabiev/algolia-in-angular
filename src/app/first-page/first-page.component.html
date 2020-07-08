@@ -1,10 +1,12 @@
 <s-cnt-faq-header [header]="getHeader()"
                   (clickBack)="showEvent($event)"></s-cnt-faq-header>
-<s-cnt-faq-search [menu]="getSearchMenu()" [category]="getCategory()" [logo]="getLogo()" [placeHolder]="getPlaceholder()"
+<s-cnt-faq-search [menu]="getSearchMenu()" [category]="getCategory()" [searchHints]="getBlocks()"
+                  [logo]="getLogo()" [placeHolder]="getPlaceholder()"
                   (clickMenu)="showEvent($event)"
                   (clickSearch)="showEvent($event)"
                   (clickLogo)="showEvent($event)"
                   (clickCategory)="showEvent($event)"
+                  (clickSearchHint)="showEvent($event)"
                   (inputValueDown)="showEvent($event)"
                   (inputValueUp)="showEvent($event)"></s-cnt-faq-search>
 <s-cnt-faq-block-header [blockHeader]="getBlockHeader()"
