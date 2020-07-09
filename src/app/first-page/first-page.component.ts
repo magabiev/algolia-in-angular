@@ -7,7 +7,16 @@ import {AlgoliaService} from "../algolia.service";
   styleUrls: ['./first-page.component.css']
 })
 export class FirstPageComponent implements OnInit {
-
+  searchState = false;
+  showSearch = () => {
+    this.searchState = true;
+  }
+  hideSearch = () => {
+    this.searchState = false;
+  }
+  getSearchPlace() {
+    return this.algolia.placeholderValue;
+  }
   constructor(private algolia: AlgoliaService) { }
   getHeader = () => {
     return this.algolia.header.slice(0,1);

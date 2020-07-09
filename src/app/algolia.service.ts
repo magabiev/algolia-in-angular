@@ -166,7 +166,11 @@ export class AlgoliaService {
       authorAction: 'Менеджер по маркетингу продуктов'
     },
   ];
-
+  placeholderValue = [
+    {
+      text: 'Введите запрос',
+    }
+  ];
 
   constructor() { }
 }

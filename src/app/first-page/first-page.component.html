@@ -9,8 +9,16 @@
                   (clickSearchHint)="showEvent($event)"
                   (inputValueDown)="showEvent($event)"
                   (inputValueUp)="showEvent($event)"></s-cnt-faq-search>
+<s-cnt-faq-search-pop-up *ngIf="searchState"
+                         [searchHintsData]="getBlocks()"
+                         [searchPlace]="getSearchPlace()"
+                         (clickBlackBlock)="hideSearch()"
+                         (clickSearchPop)="showEvent($event)"
+                         (clickHints)="showEvent($event)"
+                         (searchKeyDown)="showEvent($event)"
+                         (searchKeyup)="showEvent($event)"></s-cnt-faq-search-pop-up>
 <s-cnt-faq-block-header [blockHeader]="getBlockHeader()"
-                        (clickLink)="showEvent($event)"
+                        (clickLink)="showSearch()"
                         (clickRight)="showEvent($event)"
                         (clickLeft)="showEvent($event)"></s-cnt-faq-block-header>
 <div class="my_container">
